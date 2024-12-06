@@ -25,6 +25,14 @@ driver.get('https://www.jaka.com/download')
 
 # 等待页面加载完成（根据需要调整等待时间）
 time.sleep(5)  # 或者使用WebDriverWait进行更智能的等待
+#WebDriverWait(driver, 5).until(EC.text_to_be_present_in_element((By.TAG_NAME, 'div'), '说明书'))
+
+js_code = """
+  var elements = document.getElementsByClassName('cover');
+  while (elements.length > 0) {
+    elements[0].parentNode.removeChild(elements[0]);
+  } """
+driver.execute_script(js_code)
 
 try:
     # 定位所有包含“下载”文字的按钮或链接（根据实际情况调整定位方式）
