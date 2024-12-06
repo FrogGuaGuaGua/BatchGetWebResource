@@ -62,7 +62,7 @@ def download_file(url, local_folder):
         filename = os.path.basename(urllib.parse.urlparse(url).path)
  
         # 检查文件扩展名
-        if filename.lower().endswith(('.pdf', '.step', '.zip','.rar')):
+        if filename.lower().endswith(('.pdf', '.step', '.zip','.rar','.exe','.apk')):
             # 构建本地文件路径
             local_file_path = os.path.join(local_folder, filename)
  
@@ -82,7 +82,7 @@ def download_file(url, local_folder):
  
 def main():
     url = 'https://www.aubo-robotics.cn/download'  # 替换为你要检查的URL
-    local_folder = r"D:\仪器说明书\遨博机械臂"        # 替换为你的本地文件夹路径
+    local_folder = r"D:\仪器说明书\节卡机械臂"        # 替换为你的本地文件夹路径
  
     # 确保本地文件夹存在
     os.makedirs(local_folder, exist_ok=True)
