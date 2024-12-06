@@ -166,3 +166,9 @@ cython_debug/
 /.vs/GetWebResource/v17
 /GetWebResource.pyproj
 /GetWebResource.sln
+/.vs/BatchGetWebResource/FileContentIndex
+/.vs/BatchGetWebResource/v17
+/BatchGetWebResource.pyproj
+/BatchGetWebResource.sln
+/.vs
+*.user
